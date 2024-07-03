@@ -1,6 +1,6 @@
 # Quick Start
 
-TODO: Description
+Ecosystem Plugin for berachain support in Ape.
 
 ## Dependencies
 
@@ -8,12 +8,28 @@ TODO: Description
 
 ## Installation
 
+### via `ape`
+
+You can install this plugin using `ape`:
+
+```bash
+ape plugins install berachain
+```
+
+or via config file:
+
+```yaml
+# ape-config.yaml
+plugins:
+  - name: berachain
+```
+
 ### via `pip`
 
 You can install the latest release via [`pip`](https://pypi.org/project/pip/):
 
 ```bash
-pip install <PYPI_NAME>
+pip install ape-berachain
 ```
 
 ### via `setuptools`
@@ -21,16 +37,19 @@ pip install <PYPI_NAME>
 You can clone the repository and use [`setuptools`](https://github.com/pypa/setuptools) for the most up-to-date version:
 
 ```bash
-git clone https://github.com/ApeWorX/<PYPI_NAME>.git
-cd <PYPI_NAME>
+git clone https://github.com/ApeWorX/ape-berachain.git
+cd ape-berachain
 python3 setup.py install
 ```
 
 ## Quick Usage
 
-TODO: Describe library overview in code
+Installing this plugin adds support for the berachain ecosystem:
+
+```bash
+ape console --network berachain:bartio
+```
 
 ## Development
 
-Please see the [contributing guide](CONTRIBUTING.md) to learn more how to contribute to this project.
 Comments, questions, criticisms and pull requests are welcomed.
