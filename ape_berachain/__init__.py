@@ -19,16 +19,16 @@ def ecosystems():
 @plugins.register(plugins.NetworkPlugin)
 def networks():
     for network_name, network_params in NETWORKS.items():
-        yield "Berachain", network_name, create_network_type(*network_params)
-        yield "Berachain", f"{network_name}-fork", ForkedNetworkAPI
+        yield "berachain", network_name, create_network_type(*network_params)
+        yield "berachain", f"{network_name}-fork", ForkedNetworkAPI
 
     # NOTE: This works for development providers, as they get chain_id from themselves
-    yield "Berachain", LOCAL_NETWORK_NAME, NetworkAPI
+    yield "berachain", LOCAL_NETWORK_NAME, NetworkAPI
 
 
 @plugins.register(plugins.ProviderPlugin)
 def providers():
     for network_name in NETWORKS:
-        yield "Berachain", network_name, Node
+        yield "berachain", network_name, Node
 
-    yield "Berachain", LOCAL_NETWORK_NAME, LocalProvider
+    yield "berachain", LOCAL_NETWORK_NAME, LocalProvider

@@ -10,7 +10,7 @@ from ape_ethereum.ecosystem import (
 NETWORKS = {
     # chain_id, network_id
     # "mainnet": (0,0 ),
-    "bartio": (8000180084, 8000180084),
+    "bartio": (80084, 80084),
 }
 
 
@@ -25,4 +25,5 @@ class Berachain(Ethereum):
 
     @property
     def config(self) -> BerachainConfig:  # type: ignore[override]
-        return cast(BerachainConfig, self.config_manager.get_config("Berachain"))
+        cfg = self.config_manager.get_config("berachain")
+        return cast(BerachainConfig, cfg)
