@@ -7,7 +7,7 @@ Ecosystem Plugin for berachain support in Ape.
 - [python3](https://www.python.org/downloads) version 3.9 up to 3.12.
 
 ## Installation
-
+<!-- 
 ### via `ape`
 
 You can install this plugin using `ape`:
@@ -22,7 +22,7 @@ or via config file:
 # ape-config.yaml
 plugins:
   - name: berachain
-```
+``` -->
 
 ### via `pip`
 
